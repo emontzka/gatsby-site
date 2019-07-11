@@ -1,0 +1,25 @@
+body.menu-open .menu-container {
+    left: 0;
+}
+
+body.menu-open .overlay {
+    display: block;
+}
+
+.menu-container {
+    width: 250px;
+    left: -250px;
+}
+
+.overlay {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .layout-content {
+        padding-left: 250px;
+    }
+    .menu-container {
+        left: 0;
+    }
+}
