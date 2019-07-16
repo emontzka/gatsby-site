@@ -92,7 +92,7 @@ module.exports = {
           "**/users",
           "**/*/*/menus",
           "**/*/*/portfolio",
-          "**/*/*/project",
+          "**/*/*/projects",
           "**/*/*/work",
         ],
         // Blacklisted routes using glob patterns

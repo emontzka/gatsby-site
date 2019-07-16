@@ -1,11 +1,11 @@
 import React from 'react'
-import Panel from './Panel'
+import {PanelComponent} from './Panel'
 import styled from 'styled-components';
 
-const HalfPanelComponent = styled.Panel`
-    width: calc(50% - 40px);
+const HalfPanelComponent = styled(PanelComponent)`
+    width: calc(50% - 20px);
     @media(min-width: 808px) {
-        max-width: 364px;
+        // max-width: 364px;
     }
 `
 

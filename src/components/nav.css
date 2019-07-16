@@ -4,15 +4,19 @@ body.menu-open .menu-container {
 
 body.menu-open .overlay {
     display: block;
+    opacity: 1;
 }
 
 .menu-container {
     width: 250px;
     left: -250px;
+    transition: all 0.3s;
 }
 
 .overlay {
     display: none;
+    opacity: 0;
+    transition: opacity 0.3s
 }
 
 @media (min-width: 768px) {
