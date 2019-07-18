@@ -13,9 +13,11 @@ import FixedMenu from './UI/FixedHeader'
 import Overlay from './UI/Overlay'
 
 import Header from "./header"
+
 import "./layout.css"
 import "./nav.css"
 import styled from 'styled-components'
+
 
 // const Main = styled.main`
 //   width: 100%;

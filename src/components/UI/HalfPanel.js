@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 const HalfPanelComponent = styled(PanelComponent)`
     width: calc(50% - 20px);
+    height: 400px;
+    position: relative;
     @media(min-width: 808px) {
         // max-width: 364px;
     }

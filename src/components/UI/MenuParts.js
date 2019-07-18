@@ -11,10 +11,6 @@ const Item = styled.li`
   text-align: center;
   cursor: pointer;
   transition: all 0.25s;
-  margin: 0;
-  padding: 40px 10px;
-  font-weight: bold;
-  font-size: 20px;
   user-select: none;
   color: ${props => (props.selected ? "#07689f" : "inherit")};
   border-top: 5px solid ${props =>

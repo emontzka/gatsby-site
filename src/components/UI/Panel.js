@@ -8,6 +8,7 @@ export const PanelComponent = styled.div`
     border-radius: 5px;
     margin-bottom: 40px;
     width: 100%;
+    overflow: hidden;
 `
 
 export default function Panel(props) {

@@ -12,7 +12,9 @@ import Experience from "../components/pageComponents/Experience"
 import Projects from "../components/pageComponents/Projects"
 import Homepage from "../components/pageComponents/Homepage"
 
+
 const IndexPage = () => (
+  <>
   <ScrollingProvider scrollBehavior="smooth">
   <Layout className="layout">
     
@@ -62,10 +64,17 @@ const IndexPage = () => (
             id
             title
             content
+            featured_media {
+              source_url
+              media_details {
+                file
+              }
+            }
             acf {
               github
               url
-              description
+              project_description
+              short_project_description
             }
           }
         }
@@ -105,6 +114,7 @@ const IndexPage = () => (
     
   </Layout>
   </ScrollingProvider>
+  </>
 )
 
 export default IndexPage
