@@ -12,8 +12,9 @@ const InnerContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 800px;
-    justify-content: space-between;
+    // max-width: 800px;
+    // justify-content: space-between;
+    justify-content: center;
     width: 100%;
     padding: 0 20px;
 `

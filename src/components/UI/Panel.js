@@ -9,6 +9,7 @@ export const PanelComponent = styled.div`
     margin-bottom: 40px;
     width: 100%;
     overflow: hidden;
+    max-width: 768px;
 `
 
 export default function Panel(props) {
