@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Section } from 'react-scroll-section'
+import {lightblue, medblue, darkblue, gray} from '../UI/colors'
 
 const HomeSection = styled.div`
   display: flex;
@@ -8,7 +9,8 @@ const HomeSection = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  
+  background-color: ${gray};
+  color: #fff;
   height: calc(100vh + 100px);
   @media(min-width: 768px) {
       height: 100vh;

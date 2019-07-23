@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import menubar from '../../images/icons/menu-bar.png'
 
-console.log(menubar)
-
 const HEADER_HEIGHT = '100px'
 
 const Fixed = styled.div`

@@ -11,6 +11,8 @@ import {ScrollingProvider, Section} from 'react-scroll-section'
 import Experience from "../components/pageComponents/Experience"
 import Projects from "../components/pageComponents/Projects"
 import Homepage from "../components/pageComponents/Homepage"
+import Skills from "../components/pageComponents/Skills"
+import Work from "../components/pageComponents/Work"
 
 
 const IndexPage = () => (
@@ -36,12 +38,6 @@ const IndexPage = () => (
                   duty
                 }
               }
-              skill_category {
-                category_name
-                skill {
-                  skill_name
-                }
-              }
             }
           }
         }
@@ -51,9 +47,13 @@ const IndexPage = () => (
           node {
             id
             title
-            content
+            featured_media {
+              source_url
+            }
             acf {
               portfolio_url
+              short_description
+              description
             }
           }
         }
@@ -79,6 +79,20 @@ const IndexPage = () => (
           }
         }
       }
+      allWordpressWpSkills {
+        edges {
+          node {
+            featured_media {
+              source_url
+            }
+            title
+            id
+            categories {
+              name
+            }
+          }
+        }
+      }
     }
     `} render={props => {
         let pageData = {}
@@ -92,7 +106,11 @@ const IndexPage = () => (
         let projectData = {}
         props.allWordpressWpProjects.edges.forEach(post => (
           projectData[post.node.title] = post.node
-        ))      
+        ))  
+        let skillsData = {}
+        props.allWordpressWpSkills.edges.forEach(post => (
+          skillsData[post.node.title] = post.node
+        ))    
         return (
           <>
             <Homepage />
@@ -101,6 +119,12 @@ const IndexPage = () => (
             </Section>
             <Section id="experience">
               <Experience data={pageData['Experience']} />
+            </Section>
+            <Section id="work">
+              <Work  data={workData}/>
+            </Section>
+            <Section id="skills">
+              <Skills data={skillsData} />
             </Section>
             
             {/* <Work data={projectData} /> */}

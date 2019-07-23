@@ -94,6 +94,7 @@ module.exports = {
           "**/*/*/portfolio",
           "**/*/*/projects",
           "**/*/*/work",
+          "**/*/*/skills",
         ],
         // Blacklisted routes using glob patterns
         excludedRoutes: [],

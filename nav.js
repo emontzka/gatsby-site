@@ -2,7 +2,6 @@ import _ from 'lodash'
 
 document.body.addEventListener("click", e => {
     const target = e.target
-    console.log()
     if (target.classList.contains('menu-item') || target.classList.contains('overlay')) {
         document.body.classList.remove('menu-open')
     }
