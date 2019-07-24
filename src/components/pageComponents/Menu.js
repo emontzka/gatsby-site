@@ -4,7 +4,7 @@ import { SectionLink } from 'react-scroll-section'
 import {darkblue, medblue, lightblue, gray} from '../UI/colors'
 
 const Container = styled.div`
-    background-color: ${medblue};
+    background-color: ${darkblue};
     // color: #fff;
     position: fixed;
     z-index: 30;
@@ -26,10 +26,14 @@ const Item = styled.li`
     font-weight: ${props => (props.selected ? 'bold' : 'inherit')};
     border-left: ${props => (props.selected ? '3px solid #fff' : 'none')};
     text-shadow: 2px 2px 3px ${gray};
+    &:first-child {
+        border-top: 1px solid ${gray};
+    }
 `
 
 const MenuItemList = styled.ul`
     margin-left: 0;
+    margin-top: 40px;
 `
 
 const MenuItem = ({section, children }) => (
@@ -49,6 +53,7 @@ export default function Menu(props) {
                 <MenuItem section="home">Home</MenuItem>
                 <MenuItem section="projects">Projects</MenuItem>
                 <MenuItem section="experience">Experience</MenuItem>
+                <MenuItem section="work">Client Work</MenuItem>
                 <MenuItem section="skills">Skills</MenuItem>
                 
             </MenuItemList>

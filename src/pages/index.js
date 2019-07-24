@@ -12,13 +12,15 @@ import Experience from "../components/pageComponents/Experience"
 import Projects from "../components/pageComponents/Projects"
 import Homepage from "../components/pageComponents/Homepage"
 import Skills from "../components/pageComponents/Skills"
-import Work from "../components/pageComponents/Work"
+import Works from "../components/pageComponents/Works"
 
 
 const IndexPage = () => (
   <>
+  
   <ScrollingProvider scrollBehavior="smooth">
   <Layout className="layout">
+  <SEO />
     
     <StaticQuery query={graphql`
       {
@@ -121,7 +123,7 @@ const IndexPage = () => (
               <Experience data={pageData['Experience']} />
             </Section>
             <Section id="work">
-              <Work  data={workData}/>
+              <Works  data={workData}/>
             </Section>
             <Section id="skills">
               <Skills data={skillsData} />

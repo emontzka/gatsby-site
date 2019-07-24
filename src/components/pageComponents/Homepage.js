@@ -22,7 +22,7 @@ export default function Home() {
     <Section id="home">
     <HomeSection>
       <h1>Hello, I'm <span>Eric Montzka</span></h1>
-      <h2>I'm a Chicago-based Web Developer</h2>
+      <p style={{fontSize: '20px'}}>I'm a front end developer and musician based in Chicago.<br />I specialize in JavaScript, React and WordPress.</p>
     </HomeSection>
     </Section>
 
