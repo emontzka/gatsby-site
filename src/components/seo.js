@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title="Eric Montzka | Web Developer"
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {

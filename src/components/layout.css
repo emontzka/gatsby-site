@@ -8,6 +8,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: pink;
 }
 article,
 aside,
@@ -619,5 +620,11 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: green;
   }
 }
