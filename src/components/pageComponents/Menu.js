@@ -38,21 +38,23 @@ const MenuItemList = styled.ul`
     margin-left: 0;
     margin-top: 40px;
 `
-
-const MenuItem = ({section, children }) => (
-    <SectionLink section={section}>
-        {link => (
-            <Item onClick={link.onClick} selected={link.isSelected} className="menu-item">
-                {children}
-            </Item>
-        )}
-    </SectionLink>
-)
+// if (typeof window !== 'undefined') {
+    const MenuItem = ({section, children }) => (
+        <SectionLink section={section}>
+            {link => (
+                <Item onClick={link.onClick} selected={link.isSelected} className="menu-item">
+                    {children}
+                </Item>
+            )}
+        </SectionLink>
+    )
+// }
 
 export default function Menu(props) {
     return (
         <Container className="menu-container">
-            <MenuItemList>
+            {typeof window !== 'undefined' && (
+           <MenuItemList>
                 <MenuItem section="home">Home</MenuItem>
                 <MenuItem section="projects">Projects</MenuItem>
                 <MenuItem section="experience">Experience</MenuItem>
@@ -60,6 +62,8 @@ export default function Menu(props) {
                 <MenuItem section="skills">Skills</MenuItem>
                 <MenuItem section="contact">Contact</MenuItem>
             </MenuItemList>
+            )}
+ 
         </Container>
     )
 }
