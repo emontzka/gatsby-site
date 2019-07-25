@@ -37,9 +37,6 @@ const Layout = ({ children }) => {
   const Content = styled.div`
     margin-left: 0;
     flex: 1 0;
-    @media(min-width: 768px) {
-
-    }
   `
 
   const LayoutContainer = styled.div`

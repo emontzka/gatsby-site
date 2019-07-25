@@ -9,9 +9,6 @@ const HalfPanelComponent = styled(PanelComponent)`
     position: relative;
     margin-left: 20px;
     margin-right: 20px;
-    @media(min-width: 808px) {
-        // max-width: 364px;
-    }
 `
 
 export default function HalfPanel(props) {

@@ -8,7 +8,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: pink;
 }
 article,
 aside,
@@ -623,8 +622,3 @@ pre tt:after {
   }
 }
 
-@media (min-width: 768px) {
-  body {
-    background-color: green;
-  }
-}

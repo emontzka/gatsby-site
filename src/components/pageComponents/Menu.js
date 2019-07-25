@@ -5,14 +5,12 @@ import {darkblue, gray} from '../UI/colors'
 
 const Container = styled.div`
     background-color: ${darkblue};
-    // color: #fff;
     position: fixed;
     z-index: 30;
     flex: 0 0 auto;
     height: 100vh;
     top: 0;
     bottom: 0;
-    left: 0;
 `
 
 const Item = styled.li`
