@@ -43,7 +43,6 @@ export const CloseBtn = styled.div`
 
 export const IconContainer = styled.div`
     position: absolute;
-    // background: pink;
     height: 40px;
     width: 100%;
     bottom: 20px;

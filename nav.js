@@ -1,5 +1,7 @@
 import _ from 'lodash'
 
+if (typeof window !== `undefined`) {
+
 document.body.addEventListener("click", e => {
     const target = e.target
     if (target.classList.contains('menu-item') || target.classList.contains('overlay')) {
@@ -15,3 +17,5 @@ function closeMenuDesktop() {
 }
 
 window.onresize = _.debounce(closeMenuDesktop, 250)
+
+}

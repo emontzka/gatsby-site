@@ -15,7 +15,7 @@ module.exports = {
          * The base URL of the Wordpress site without the trailingslash and the protocol. This is required.
          * Example : 'gatsbyjsexamplewordpress.wordpress.com' or 'www.example-site.com'
          */
-        baseUrl: "http://gatsby-portfolio:81",
+        baseUrl: "http://emontzka.xyz",
         // The protocol. This can be http or https.
         protocol: "http",
         // Indicates whether the site is hosted on wordpress.com.
@@ -113,6 +113,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-htaccess`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

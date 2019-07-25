@@ -1,18 +1,18 @@
+
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Nav from '../../nav'
 import {graphql, StaticQuery} from 'gatsby'
-import {ScrollingProvider, Section} from 'react-scroll-section'
-
 import Experience from "../components/pageComponents/Experience"
 import Projects from "../components/pageComponents/Projects"
 import Homepage from "../components/pageComponents/Homepage"
 import Skills from "../components/pageComponents/Skills"
 import Works from "../components/pageComponents/Works"
+import Contact from "../components/pageComponents/Contact"
+import {ScrollingProvider, Section} from 'react-scroll-section'
 
 
 const IndexPage = () => (
@@ -128,6 +128,10 @@ const IndexPage = () => (
             <Section id="skills">
               <Skills data={skillsData} />
             </Section>
+            <Section id="contact">
+              <Contact />
+            </Section>
+            
             
             {/* <Work data={projectData} /> */}
             {/* <Skills data={pageData['Skills']} /> */}

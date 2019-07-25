@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SectionLink } from 'react-scroll-section'
-import {darkblue, medblue, lightblue, gray} from '../UI/colors'
+import {darkblue, gray} from '../UI/colors'
 
 const Container = styled.div`
     background-color: ${darkblue};
@@ -29,6 +29,9 @@ const Item = styled.li`
     &:first-child {
         border-top: 1px solid ${gray};
     }
+    &:hover {
+        font-weight: bold;
+    }
 `
 
 const MenuItemList = styled.ul`
@@ -55,7 +58,7 @@ export default function Menu(props) {
                 <MenuItem section="experience">Experience</MenuItem>
                 <MenuItem section="work">Client Work</MenuItem>
                 <MenuItem section="skills">Skills</MenuItem>
-                
+                <MenuItem section="contact">Contact</MenuItem>
             </MenuItemList>
         </Container>
     )
