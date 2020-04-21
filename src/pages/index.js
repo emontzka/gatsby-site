@@ -5,24 +5,24 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Nav from '../../nav'
-import {graphql, StaticQuery} from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import Experience from "../components/pageComponents/Experience"
 import Projects from "../components/pageComponents/Projects"
 import Homepage from "../components/pageComponents/Homepage"
 import Skills from "../components/pageComponents/Skills"
 import Works from "../components/pageComponents/Works"
 import Contact from "../components/pageComponents/Contact"
-import {ScrollingProvider, Section} from 'react-scroll-section'
+import { ScrollingProvider, Section } from 'react-scroll-section'
 
 
 const IndexPage = () => (
   <>
-  
-  <ScrollingProvider scrollBehavior="smooth">
-  <Layout className="layout">
-  <SEO />
-    
-    <StaticQuery query={graphql`
+
+    <ScrollingProvider scrollBehavior="smooth">
+      <Layout className="layout">
+        <SEO />
+
+        <StaticQuery query={graphql`
       {
       allWordpressPage  {
         edges {
@@ -49,6 +49,7 @@ const IndexPage = () => (
           node {
             id
             title
+            date
             featured_media {
               source_url
             }
@@ -97,53 +98,53 @@ const IndexPage = () => (
       }
     }
     `} render={props => {
-        let pageData = {}
-        props.allWordpressPage.edges.forEach(page => (
-          pageData[page.node.title] = page.node
-        ))
-        let workData = {}
-        props.allWordpressWpWork.edges.forEach(post => (
-          workData[post.node.title] = post.node
-        ))
-        let projectData = {}
-        props.allWordpressWpProjects.edges.forEach(post => (
-          projectData[post.node.title] = post.node
-        ))  
-        let skillsData = {}
-        props.allWordpressWpSkills.edges.forEach(post => (
-          skillsData[post.node.title] = post.node
-        ))    
-        return (
-          <>
-            <Homepage />
-            <Section id="projects">
-              <Projects data={projectData} />
-            </Section>
-            <Section id="experience">
-              <Experience data={pageData['Experience']} />
-            </Section>
-            <Section id="work">
-              <Works  data={workData}/>
-            </Section>
-            <Section id="skills">
-              <Skills data={skillsData} />
-            </Section>
-            <Section id="contact">
-              <Contact />
-            </Section>
-            
-            
-            {/* <Work data={projectData} /> */}
-            {/* <Skills data={pageData['Skills']} /> */}
-            
-          </>
-        )
-      }
+            let pageData = {}
+            props.allWordpressPage.edges.forEach(page => (
+              pageData[page.node.title] = page.node
+            ))
+            let workData = {}
+            props.allWordpressWpWork.edges.forEach(post => (
+              workData[post.node.title] = post.node
+            ))
+            let projectData = {}
+            props.allWordpressWpProjects.edges.forEach(post => (
+              projectData[post.node.title] = post.node
+            ))
+            let skillsData = {}
+            props.allWordpressWpSkills.edges.forEach(post => (
+              skillsData[post.node.title] = post.node
+            ))
+            return (
+              <>
+                <Homepage />
+                <Section id="projects">
+                  <Projects data={projectData} />
+                </Section>
+                <Section id="experience">
+                  <Experience data={pageData['Experience']} />
+                </Section>
+                <Section id="work">
+                  <Works data={workData} />
+                </Section>
+                <Section id="skills">
+                  <Skills data={skillsData} />
+                </Section>
+                <Section id="contact">
+                  <Contact />
+                </Section>
 
-    }/>
-    
-  </Layout>
-  </ScrollingProvider>
+
+                {/* <Work data={projectData} /> */}
+                {/* <Skills data={pageData['Skills']} /> */}
+
+              </>
+            )
+          }
+
+          } />
+
+      </Layout>
+    </ScrollingProvider>
   </>
 )
 

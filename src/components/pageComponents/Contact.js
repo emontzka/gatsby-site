@@ -38,14 +38,14 @@ const Icon = styled(FontAwesomeIcon)`
 
 export default function Contact(props) {
     return (
-        <div style={{backgroundColor: gray}}>
+        <div style={{ backgroundColor: gray }}>
             <ContactHeading>Contact</ContactHeading>
             <IconContainer>
-            <a  href="https://github.com/emontzka" target="_blank"><Icon icon={faGithub} /></a>
-            <a  href="https://www.linkedin.com/in/eric-montzka/" target="_blank"><Icon  icon={faLinkedin} /></a>
-            <a  href="mailto:emontzka@sbcglobal.net?subject=Response from portfolio site"><Icon icon={faEnvelope} /></a>
+                <a href="https://github.com/emontzka" target="_blank" rel="noopener noreferrer"><Icon icon={faGithub} /></a>
+                <a href="https://www.linkedin.com/in/eric-montzka/" target="_blank" rel="noopener noreferrer"><Icon icon={faLinkedin} /></a>
+                <a href="mailto:emontzka@sbcglobal.net?subject=Response from portfolio site"><Icon icon={faEnvelope} /></a>
             </IconContainer>
-            <footer style={{textAlign: 'center', color: '#fff'}}>
+            <footer style={{ textAlign: 'center', color: '#fff' }}>
                 © {new Date().getFullYear()}, Built with
                 {` `}
                 <FooterLink href="https://www.gatsbyjs.org">Gatsby</FooterLink>
